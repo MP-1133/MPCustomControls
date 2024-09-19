@@ -33,14 +33,15 @@
             mpButton1 = new MPButton();
             panel2 = new Panel();
             mpTextBox1 = new MPTextBox();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ButtonFace;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(mpTextBox1);
             panel1.Controls.Add(mpButton2);
             panel1.Controls.Add(mpButton1);
             panel1.Dock = DockStyle.Top;
@@ -91,7 +92,6 @@
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = SystemColors.ButtonHighlight;
             panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(mpTextBox1);
             panel2.Location = new Point(0, 190);
             panel2.Name = "panel2";
             panel2.Size = new Size(1024, 294);
@@ -106,7 +106,7 @@
             mpTextBox1.BorderSize = 2;
             mpTextBox1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mpTextBox1.ForeColor = Color.FromArgb(64, 64, 64);
-            mpTextBox1.Location = new Point(363, 63);
+            mpTextBox1.Location = new Point(143, 126);
             mpTextBox1.Margin = new Padding(4);
             mpTextBox1.Multiline = false;
             mpTextBox1.Name = "mpTextBox1";
@@ -129,7 +129,6 @@
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);
-            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -140,5 +139,6 @@
         private MPButton mpButton1;
         private MPButton mpButton2;
         private MPTextBox mpTextBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

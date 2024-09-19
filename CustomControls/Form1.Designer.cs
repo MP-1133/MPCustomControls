@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            mpButton2 = new MPButton();
             mpButton1 = new MPButton();
             panel2 = new Panel();
-            mpButton2 = new MPButton();
+            mpTextBox1 = new MPTextBox();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -46,6 +48,25 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1024, 194);
             panel1.TabIndex = 0;
+            // 
+            // mpButton2
+            // 
+            mpButton2.BackColor = Color.MediumSlateBlue;
+            mpButton2.BackgroundColor = Color.MediumSlateBlue;
+            mpButton2.BorderColor = Color.Aqua;
+            mpButton2.BorderRadius = 10;
+            mpButton2.BorderSize = 1;
+            mpButton2.FlatAppearance.BorderSize = 0;
+            mpButton2.FlatStyle = FlatStyle.Flat;
+            mpButton2.ForeColor = Color.White;
+            mpButton2.Location = new Point(693, 89);
+            mpButton2.Name = "mpButton2";
+            mpButton2.Size = new Size(188, 50);
+            mpButton2.TabIndex = 1;
+            mpButton2.Text = "mpButton2";
+            mpButton2.TextColor = Color.White;
+            mpButton2.UseVisualStyleBackColor = false;
+            mpButton2.Click += mpButton2_Click;
             // 
             // mpButton1
             // 
@@ -70,29 +91,33 @@
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = SystemColors.ButtonHighlight;
             panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(mpTextBox1);
             panel2.Location = new Point(0, 190);
             panel2.Name = "panel2";
             panel2.Size = new Size(1024, 294);
             panel2.TabIndex = 1;
             // 
-            // mpButton2
+            // mpTextBox1
             // 
-            mpButton2.BackColor = Color.MediumSlateBlue;
-            mpButton2.BackgroundColor = Color.MediumSlateBlue;
-            mpButton2.BorderColor = Color.Aqua;
-            mpButton2.BorderRadius = 10;
-            mpButton2.BorderSize = 1;
-            mpButton2.FlatAppearance.BorderSize = 0;
-            mpButton2.FlatStyle = FlatStyle.Flat;
-            mpButton2.ForeColor = Color.White;
-            mpButton2.Location = new Point(693, 89);
-            mpButton2.Name = "mpButton2";
-            mpButton2.Size = new Size(188, 50);
-            mpButton2.TabIndex = 1;
-            mpButton2.Text = "mpButton2";
-            mpButton2.TextColor = Color.White;
-            mpButton2.UseVisualStyleBackColor = false;
-            mpButton2.Click += mpButton2_Click;
+            mpTextBox1.BackColor = SystemColors.Window;
+            mpTextBox1.BorderColor = Color.MediumSlateBlue;
+            mpTextBox1.BorderFocusColor = Color.HotPink;
+            mpTextBox1.BorderRadius = 10;
+            mpTextBox1.BorderSize = 2;
+            mpTextBox1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mpTextBox1.ForeColor = Color.FromArgb(64, 64, 64);
+            mpTextBox1.Location = new Point(363, 63);
+            mpTextBox1.Margin = new Padding(4);
+            mpTextBox1.Multiline = false;
+            mpTextBox1.Name = "mpTextBox1";
+            mpTextBox1.Padding = new Padding(10, 7, 10, 7);
+            mpTextBox1.PasswordChar = false;
+            mpTextBox1.PlaceholderColor = Color.DarkGray;
+            mpTextBox1.PlaceholderText = "";
+            mpTextBox1.Size = new Size(366, 44);
+            mpTextBox1.TabIndex = 0;
+            mpTextBox1.Texts = "";
+            mpTextBox1.UnderlinedStyle = false;
             // 
             // Form1
             // 
@@ -104,6 +129,7 @@
             Name = "Form1";
             Text = "Form1";
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -111,7 +137,8 @@
 
         private Panel panel1;
         private Panel panel2;
-        private CustomControls.MPButton mpButton1;
+        private MPButton mpButton1;
         private MPButton mpButton2;
+        private MPTextBox mpTextBox1;
     }
 }
